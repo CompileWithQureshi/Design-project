@@ -1,8 +1,8 @@
-import Frame from "./Frame.png";
-import "./App.css";
-import { useState } from "react";
-
-export const LoginPage = () => {
+import Frame from "../Frame.png";
+import "../App.css";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+const LoginPage = (props) => {
   const [datas, setDatas] = useState({
     usernames: "",
     passwords: "",
@@ -10,11 +10,16 @@ export const LoginPage = () => {
   });
   const { usernames, passwords, selects } = datas;
   const onChangeHandler = (e) => {
-    setDatas({ ...datas, [e.target.name]: [e.target.value] });
+    const { name, value } = e.target;
+    setDatas({ ...datas, [name]: value });
   };
   const handelSubmit = (e) => {
-    e.preventDefault();
     console.log(datas);
+    e.preventDefault("");
+    props.history.push({
+      pathname: "/admin",
+      datas,
+    });
   };
 
   return (
@@ -60,10 +65,14 @@ export const LoginPage = () => {
               <option>Test3 unit</option>
             </select>
             <br />
-            <button className="submit-btn">Sing In</button>
+            <button className="submit-btn " type="submit">
+              Sing In
+            </button>
           </form>
         </div>
       </div>
     </div>
   );
 };
+
+export default LoginPage;

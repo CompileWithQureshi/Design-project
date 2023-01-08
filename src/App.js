@@ -1,5 +1,10 @@
 import './App.css';
-import { LoginPage } from './LoginPage';
+import {
+  BrowserRouter as Router, Switch,
+  Route,
+} from "react-router-dom";
+import LoginPage from './components/LoginPage';
+import AdminPage from './components/Adminpage1';
 
 
 function App() {
@@ -7,7 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <LoginPage />
+      <Router>
+        <Switch>
+          <Route path='/' component={LoginPage} exact={true} />
+          <Route path='/admin' component={AdminPage} />
+
+        </Switch>
+      </Router>
+
     </div>
   );
 }
