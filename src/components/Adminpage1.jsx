@@ -1,21 +1,18 @@
 import React from "react";
+import "../App.css";
 
 const AdminPage = (props) => {
   const { usernames, selects } = (props.location && props.location.datas) || {};
-  return (
-    <div>
-      <div>
-        <div>
-          <strong>Username:</strong>
-          {usernames}
-        </div>
 
-        <div>
-          <strong>Unit select:</strong>
-          {selects}
-        </div>
+  return (
+    <nav className="navbar">
+      <div>
+        <p className="nav-hdi">
+          Welcome <span className="username"> {usernames}</span>
+          <p>Cardiology</p>
+        </p>
       </div>
-    </div>
+    </nav>
   );
 };
 
