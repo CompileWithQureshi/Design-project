@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import Sidenavbar from "./Sidenavbar";
 
 const AdminPage = (props) => {
   const { usernames, selects } = (props.location && props.location.datas) || {};
@@ -11,6 +12,7 @@ const AdminPage = (props) => {
           Welcome <span className="username"> {usernames}</span>
           <p>Cardiology</p>
         </p>
+        <Sidenavbar />
       </div>
     </nav>
   );

@@ -1,5 +1,6 @@
 import React from "react";
+import "../App.css";
 
 export default function Sidenavbar() {
-  return <div>Sidenavbar</div>;
+  return <section></section>;
 }
