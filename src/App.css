@@ -140,7 +140,7 @@ small {
   place-items: center;
   margin-top: 12%;
   margin-bottom: 15%;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 a {
   display: grid;
