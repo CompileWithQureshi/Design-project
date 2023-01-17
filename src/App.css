@@ -149,3 +149,11 @@ a {
 .side-nav-img {
   position: relative;
 }
+.side-Navbar:hover {
+  width: 70px;
+}
+a:hover {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 2px;
+}
