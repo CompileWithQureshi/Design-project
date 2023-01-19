@@ -1,16 +1,34 @@
 import "./Card.css";
 import React from "react";
+import { AiOutlineUser } from "react-icons/ai";
 
 function CardContainer() {
   return (
     <section>
-      <div className="card-container">
-        <div className="cards">
-          <img src="./original.webp" alt="doctor" className="card-img" />
+      <div className="card">
+        <div className="card-img">
+          <AiOutlineUser />
         </div>
-        <div className="card-details">
-          <h4>Doctor Name</h4>
-          <h5>Profecion</h5>
+        <div className="card-info">
+          <h2>Nmae</h2>
+          <p>Speacilist</p>
+          <h4>* 5.0</h4>
+        </div>
+        <div className="card-img">
+          <AiOutlineUser />
+        </div>
+        <div className="card-info">
+          <h2>Nmae</h2>
+          <p>Speacilist</p>
+          <h4>* 5.0</h4>
+        </div>
+        <div className="card-img">
+          <AiOutlineUser />
+        </div>
+        <div className="card-info">
+          <h2>Nmae</h2>
+          <p>Speacilist</p>
+          <h4>* 5.0</h4>
         </div>
       </div>
     </section>

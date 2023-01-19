@@ -1,15 +1,18 @@
-.card-container {
-  width: max-content;
-  border: 2px solid #f2f555;
-  display: flex;
-  justify-content: space-around;
-}
-.cards {
-  border: 5px solid #f2f5;
+/*Card css*/
 
-  /* align-items: center; */
+.card {
+  width: fit-content;
+  display: flex;
 }
 .card-img {
-  width: 100px;
-  border-radius: 100%;
+  width: auto;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 5px;
+  padding: 2px;
+  border: 2px solid greenyellow;
+}
+.card-info {
+  padding: 3px;
 }

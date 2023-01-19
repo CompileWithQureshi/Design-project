@@ -161,8 +161,10 @@ a:hover {
 /*Card container in admin-page*/
 
 main {
-  display: flex;
+  display: grid;
+  place-items: center;
 
+  width: fit-content;
   border: 2px solid #203765;
-  margin: 50px;
+  margin: 30px 70px;
 }
