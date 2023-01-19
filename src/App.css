@@ -126,12 +126,13 @@ small {
   overflow-y: auto;
 } */
 .side-Navbar {
-  height: max-content;
+  height: fit-content;
   width: 50px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
+  border-radius: 5px;
   background-color: #203765;
   transition: 0.5s ease;
   overflow-x: hidden;
@@ -156,4 +157,12 @@ a:hover {
   border: 2px solid white;
   border-radius: 5px;
   padding: 2px;
+}
+/*Card container in admin-page*/
+
+main {
+  display: flex;
+
+  border: 2px solid #203765;
+  margin: 50px;
 }

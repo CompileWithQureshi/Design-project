@@ -1,9 +1,10 @@
 import React from "react";
 import "../App.css";
+import CardContainer from "./cardfolder/cardContainer";
 import Sidenavbar from "./Sidenavbar";
 
 const AdminPage = (props) => {
-  const { usernames, selects } = (props.location && props.location.datas) || {};
+  const { usernames } = (props.location && props.location.datas) || {};
 
   return (
     <div className="admin-container">
@@ -14,6 +15,9 @@ const AdminPage = (props) => {
         </p>
         <Sidenavbar />
       </nav>
+      <main>
+        <CardContainer />
+      </main>
     </div>
   );
 };

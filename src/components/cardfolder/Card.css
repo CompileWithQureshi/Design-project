@@ -1,0 +1,15 @@
+.card-container {
+  width: max-content;
+  border: 2px solid #f2f555;
+  display: flex;
+  justify-content: space-around;
+}
+.cards {
+  border: 5px solid #f2f5;
+
+  /* align-items: center; */
+}
+.card-img {
+  width: 100px;
+  border-radius: 100%;
+}
