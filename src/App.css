@@ -165,6 +165,6 @@ main {
   place-items: center;
 
   width: fit-content;
-  border: 2px solid #203765;
+  /* border: 2px solid #203765; */
   margin: 30px 70px;
 }
