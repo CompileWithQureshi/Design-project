@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import "./Card.css";
 import React from "react";
 // import { AiOutlineUser } from "react-icons/ai";
@@ -22,8 +23,11 @@ function CardContainer() {
   });
   return (
     <section>
-      <h2>Top Doctors</h2>
-      <div className="cards">{cardDetails}</div>
+      <div className="card-container">
+        <h2>Top Doctors</h2>
+        <div className="cards">{cardDetails}</div>
+        <a href="/*">View All</a>
+      </div>
     </section>
   );
 }

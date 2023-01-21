@@ -51,6 +51,8 @@
   /* background-color: #203765; */
 }
 .sign-in {
+  position: fixed;
+  top: 50px;
   font-family: Inter;
   font-size: 22px;
   font-weight: 600;
@@ -60,7 +62,7 @@
   color: #29375f;
 }
 .form-container {
-  margin-top: -15rem;
+  margin-top: 3rem;
   display: grid;
   align-items: center;
   justify-items: center;
