@@ -6,8 +6,12 @@ import React, { useState } from "react";
 import { a } from "./data";
 
 function CardContainer() {
+  const [views, setViews] = useState(2);
+  // const
   console.log(a);
-  const cardDetails = a.map((items) => {
+  const data = a.slice(0, views);
+  console.log(data);
+  const cardDetails = data.map((items) => {
     const { id, img, speacilist, name, rating } = items;
     return (
       <div key={id} className="card-details">
@@ -27,7 +31,14 @@ function CardContainer() {
       <div className="card-container">
         <h2>Top Doctors</h2>
         <div className="cards">{cardDetails}</div>
-        <a className="view-btn">View All</a>
+        <a
+          className="view-btn"
+          onClick={() => {
+            setViews(views + views);
+          }}
+        >
+          View All
+        </a>
       </div>
     </section>
   );

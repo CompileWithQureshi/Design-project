@@ -34,8 +34,9 @@
   background-color: #f5f5f7;
   border-radius: 5px;
   padding: 5px;
-  height: 100vh;
+  height: fit-content;
 }
 .view-btn {
   border: none;
+  cursor: pointer;
 }
