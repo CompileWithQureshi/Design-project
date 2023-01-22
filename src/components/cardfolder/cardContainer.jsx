@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "./Card.css";
-import React from "react";
+import React, { useState } from "react";
 // import { AiOutlineUser } from "react-icons/ai";
 import { a } from "./data";
 
@@ -26,7 +27,7 @@ function CardContainer() {
       <div className="card-container">
         <h2>Top Doctors</h2>
         <div className="cards">{cardDetails}</div>
-        <a href="/*">View All</a>
+        <a className="view-btn">View All</a>
       </div>
     </section>
   );
