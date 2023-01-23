@@ -2,9 +2,28 @@ import React from "react";
 import "../App.css";
 import CardContainer from "./cardfolder/cardContainer";
 import Sidenavbar from "./Sidenavbar";
+// import Axios from "axios";
+import { useEffect, useState } from "react";
 
 const AdminPage = (props) => {
   const { usernames } = (props.location && props.location.datas) || {};
+  const [info, setInfo] = useState({});
+
+  useEffect(() => {
+    const url = "https://randomuser.me/api/";
+    const fectData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        setInfo(json.results[0].picture.medium);
+        console.log(json.results[0].picture);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fectData();
+    console.log(fectData());
+  }, []);
 
   return (
     <div className="admin-container">
@@ -16,7 +35,7 @@ const AdminPage = (props) => {
         <Sidenavbar />
       </nav>
       <main>
-        <CardContainer />
+        <CardContainer info={info} />
       </main>
     </div>
   );

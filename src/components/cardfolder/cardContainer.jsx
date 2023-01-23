@@ -5,7 +5,7 @@ import React, { useState } from "react";
 // import { AiOutlineUser } from "react-icons/ai";
 import { a } from "./data";
 
-function CardContainer() {
+function CardContainer({ info }) {
   const [views, setViews] = useState(2);
 
   // const
@@ -13,11 +13,11 @@ function CardContainer() {
   const data = a.slice(0, views);
   // console.log(data);
   const cardDetails = data.map((items) => {
-    const { id, img, speacilist, name, rating } = items;
+    const { id, speacilist, name, rating } = items;
     return (
       <div key={id} className="card-details">
         <div className="card-img">
-          <img src={img} alt="dr.img" width="130px" height="max-content" />
+          <img src={info} alt="dr.img" width="130px" height="max-content" />
         </div>
         <div className="card-info">
           <h5>{name}</h5>
