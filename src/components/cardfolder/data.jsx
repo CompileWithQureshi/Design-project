@@ -2,7 +2,7 @@ export const a = [
   {
     id: 1,
     // img: "./original.webp",
-    name: "Test1",
+    name: "Dr.Asarwal Kitnyassasa",
     speacilist: "speacilist",
     rating: 5.3,
   },

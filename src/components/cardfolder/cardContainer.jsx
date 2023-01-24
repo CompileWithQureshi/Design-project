@@ -2,7 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "./Card.css";
 import React, { useState } from "react";
-// import { AiOutlineUser } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+
 import { a } from "./data";
 
 function CardContainer({ info }) {
@@ -15,12 +16,27 @@ function CardContainer({ info }) {
     return (
       <div key={id} className="card-details">
         <div className="card-img">
-          <img src={info} alt="dr.img" width="130px" height="max-content" />
+          <img
+            src={info}
+            alt="dr.img"
+            width="100px"
+            height="100px"
+            className="image"
+          />
         </div>
         <div className="card-info">
-          <h5>{name}</h5>
-          <h5>{speacilist}</h5>
-          <p>{rating}</p>
+          <h5>Name:{name}</h5>
+          <p>Speacilist: {speacilist}</p>
+          <p>
+            <AiFillStar />
+            {rating}
+            {"  "}
+            Reviews
+            {"  "}
+            {"  "}
+            {"  "}
+          </p>
+          <span></span>
         </div>
       </div>
     );
