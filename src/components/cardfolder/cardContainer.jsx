@@ -8,10 +8,8 @@ import { a } from "./data";
 function CardContainer({ info }) {
   const [views, setViews] = useState(2);
 
-  // const
-  // console.log(a);
   const data = a.slice(0, views);
-  // console.log(data);
+  console.log(data);
   const cardDetails = data.map((items) => {
     const { id, speacilist, name, rating } = items;
     return (
