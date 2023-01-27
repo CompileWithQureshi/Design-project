@@ -4,6 +4,7 @@ import CardContainer from "./cardfolder/cardContainer";
 import Sidenavbar from "./Sidenavbar";
 // import Axios from "axios";
 import { useEffect, useState } from "react";
+import Product from "./Product/Product";
 
 const AdminPage = (props) => {
   const { usernames } = (props.location && props.location.datas) || {};
@@ -26,17 +27,22 @@ const AdminPage = (props) => {
   }, []);
 
   return (
-    <div className="admin-container">
-      <nav className="navbar">
-        <p className="nav-hdi">
-          Welcome <span className="username"> {usernames}</span>
-          <small>Cardiology</small>
-        </p>
-        <Sidenavbar />
-      </nav>
-      <main>
-        <CardContainer info={info} />
-      </main>
+    <div>
+      <div className="admin-container">
+        <nav className="navbar">
+          <p className="nav-hdi">
+            Welcome <span className="username"> {usernames}</span>
+            <small>Cardiology</small>
+          </p>
+          <Sidenavbar />
+        </nav>
+        <main>
+          <CardContainer info={info} />
+        </main>
+      </div>
+      <div className="product-container">
+        <Product />
+      </div>
     </div>
   );
 };
