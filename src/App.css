@@ -173,3 +173,10 @@ main {
   /* border: 2px solid #203765; */
   margin: 30px 70px;
 }
+/*Product section*/
+.product-container {
+  background-color: #203765;
+  color: #c0ceff;
+  margin: 10px;
+  /* width: auto; */
+}

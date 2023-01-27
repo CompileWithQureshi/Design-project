@@ -27,22 +27,21 @@ const AdminPage = (props) => {
   }, []);
 
   return (
-    <div>
-      <div className="admin-container">
-        <nav className="navbar">
-          <p className="nav-hdi">
-            Welcome <span className="username"> {usernames}</span>
-            <small>Cardiology</small>
-          </p>
-          <Sidenavbar />
-        </nav>
-        <main>
-          <CardContainer info={info} />
-        </main>
-      </div>
-      <div className="product-container">
-        <Product />
-      </div>
+    <div className="admin-container">
+      <nav className="navbar">
+        <p className="nav-hdi">
+          Welcome <span className="username"> {usernames}</span>
+          <small>Cardiology</small>
+        </p>
+        <Sidenavbar />
+      </nav>
+      <main>
+        <CardContainer info={info} />
+        <br />
+        <div className="product-container">
+          <Product />
+        </div>
+      </main>
     </div>
   );
 };
