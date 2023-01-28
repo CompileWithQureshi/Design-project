@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./product.css";
 import productData from "./productdata";
 function Product() {
-  const [proDetails, setProDetails] = useState(2);
+  const [proDetails, setProDetails] = useState(1);
   const details = productData.slice(0, proDetails);
 
   const products = details.map((product) => {
@@ -19,7 +19,17 @@ function Product() {
   });
   return (
     <div className="product-container">
-      <section>{products}</section>
+      <section>
+        <button
+          className="product-btn"
+          onClick={() => {
+            setProDetails(proDetails + proDetails);
+          }}
+        >
+          <span className="product-title">more </span>
+        </button>
+        {products}
+      </section>
     </div>
   );
 }
