@@ -6,3 +6,27 @@
   width: fit-content;
   /* border: 2px solid #203765; */
 /* margin: 30px 70px; */
+.product-details {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+.name {
+  border: 1px dotted greenyellow;
+  margin: 2px;
+  padding: 3px;
+}
+.price {
+  border: 1px dotted blueviolet;
+  margin: 2px;
+  padding: 3px;
+}
+.Avalaible {
+  border: 1px dotted yellow;
+  margin: 2px;
+  padding: 3px;
+}
