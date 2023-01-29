@@ -38,7 +38,7 @@ const AdminPage = (props) => {
       <main>
         <CardContainer info={info} />
         <br />
-        <div className="product-container">
+        <div className="product-align">
           <Product />
         </div>
       </main>

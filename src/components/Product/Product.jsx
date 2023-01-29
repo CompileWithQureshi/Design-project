@@ -12,22 +12,26 @@ function Product() {
     return (
       <div key={id} className="product-details">
         <p className="product name">Product Name: {produ}</p>
-        <p className="product price">Price: {price}</p>
-        <p className="product Avalaible">Avalaible: {Avalable}</p>
+        <p className="product price">Price: ${price}</p>
+        <p className="product Avalaible">Avalaible {Avalable}</p>
       </div>
     );
   });
   return (
     <div className="product-container">
       <section>
-        <button
-          className="product-btn"
-          onClick={() => {
-            setProDetails(proDetails + proDetails);
-          }}
-        >
-          <span className="product-title">more </span>
-        </button>
+        <div className="prduct-header">
+          <strong>Product details.</strong>
+          <button
+            className="product-btn"
+            onClick={() => {
+              setProDetails(proDetails + proDetails);
+            }}
+          >
+            <span className="product-title">more </span>
+          </button>
+        </div>
+
         {products}
       </section>
     </div>

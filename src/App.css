@@ -103,7 +103,7 @@ small {
   height: 100vh;
   overflow-y: scroll;
   border-radius: 5px;
-  background-color: #c0ceff;
+  background-color: #e3e3e4;
 }
 .navbar {
   width: 100%;
@@ -135,7 +135,6 @@ small {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #c0ceff;
 
   border-radius: 5px;
   background-color: #203765;
@@ -167,15 +166,10 @@ a:hover {
 
 main {
   display: grid;
-  place-items: center;
-
+  justify-content: center;
+  align-items: center;
   width: fit-content;
   /* border: 2px solid #203765; */
   margin: 30px 70px;
+  justify-items: start;
 }
-/*Product section*/
-/* .product-container {
-  background-color: #203765;
-  color: #c0ceff;
-  margin: 10px;
-  /* width: auto; */

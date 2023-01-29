@@ -1,51 +1,50 @@
 .product-container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  /* place-items: center; */
-  border: 2px solid black;
-
-  width: fit-content;
-  /* border: 2px solid #203765; */
+  margin: 2px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
 }
 .product-details {
   display: flex;
   padding: 10px;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   margin: 10px;
-  border: 2px solid black;
+  border: none;
+  border-radius: 5px;
+  background-color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .name {
-  border: 1px dotted greenyellow;
-  margin: 2px;
+  margin-right: 3rem;
   padding: 3px;
+  font-weight: bold;
 }
 .price {
-  border: 1px dotted blueviolet;
-  margin: 2px;
+  margin-right: 3rem;
+
   padding: 3px;
 }
 .Avalaible {
-  border: 1px dotted yellow;
-  margin: 2px;
+  margin-right: 3rem;
+
   padding: 3px;
-}
-section {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  margin-top: 5px;
 }
 .product-title {
   padding: 3px;
   height: fit-content;
 }
 .product-btn {
+  margin-top: 5px;
   background-color: transparent;
   border: 1px solid #203765;
   border-radius: 5px;
   cursor: pointer;
+}
+.prduct-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12px;
 }

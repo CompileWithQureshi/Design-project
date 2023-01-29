@@ -1,28 +1,27 @@
 .card-details {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  align-items: center;
   margin: 2rem;
   padding: 2rem;
-  border-radius: 5px;
-  flex-wrap: wrap;
+  border-radius: 1.5rem;
+  flex-wrap: nowrap;
   align-content: center;
   flex-direction: row;
-  box-shadow: 0 5px 5px 5px gray;
-  background-color: rgb(219, 219, 219);
+  /* box-shadow: 0 5px 5px 5px grey; */
+  background-color: rgb(221, 236, 234);
+  justify-content: space-between;
 }
 
 .cards {
   display: grid;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: fit-content;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
   background-color: #f5f5f7;
 
   gap: 10px;
   font-family: sans-serif;
-  border-radius: 5px;
   padding: 5px;
 }
 .card-img {
@@ -31,15 +30,20 @@
   /* background-color: #203765; */
 }
 .card-container {
-  box-shadow: 0 5px 5px 5px gray;
+  /* box-shadow: 0 5px 5px 5px gray; */
   background-color: #f5f5f7;
-  border-radius: 5px;
+  border-radius: 1.7rem;
   padding: 5px;
   height: fit-content;
+  padding: 20px;
 }
 .view-btn {
   border: none;
   cursor: pointer;
+  padding: 15px;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  margin-right: 20px;
 }
 .image {
   /* border: 2px dotted black; */
@@ -51,4 +55,9 @@
   justify-content: start;
   /* align-items: center; */
   text-align: start;
+}
+.card-hearder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

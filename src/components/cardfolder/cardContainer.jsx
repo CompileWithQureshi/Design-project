@@ -44,16 +44,18 @@ function CardContainer({ info }) {
   return (
     <section>
       <div className="card-container">
-        <h2>Top Doctors</h2>
+        <div className="card-hearder">
+          <h2>Top Doctors</h2>
+          <button
+            className="view-btn"
+            onClick={() => {
+              setViews(views + views);
+            }}
+          >
+            View All
+          </button>
+        </div>
         <div className="cards">{cardDetails}</div>
-        <a
-          className="view-btn"
-          onClick={() => {
-            setViews(views + views);
-          }}
-        >
-          View All
-        </a>
       </div>
     </section>
   );
