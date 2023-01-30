@@ -5,6 +5,7 @@ import Sidenavbar from "./Sidenavbar";
 // import Axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "./Product/Product";
+import Consultation from "./consultation/consultation";
 
 const AdminPage = (props) => {
   const { usernames } = (props.location && props.location.datas) || {};
@@ -40,6 +41,7 @@ const AdminPage = (props) => {
         <br />
         <div className="product-align">
           <Product />
+          <Consultation />
         </div>
       </main>
     </div>

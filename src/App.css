@@ -173,3 +173,8 @@ main {
   margin: 30px 70px;
   justify-items: start;
 }
+
+.product-align {
+  display: flex;
+  justify-content: space-between;
+}
