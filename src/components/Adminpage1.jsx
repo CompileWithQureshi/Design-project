@@ -41,7 +41,7 @@ const AdminPage = (props) => {
         <br />
         <div className="product-align">
           <Product />
-          <Consultation />
+          <Consultation info={info} />
         </div>
       </main>
     </div>

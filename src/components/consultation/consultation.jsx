@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import "./consultation.css";
+import { a } from "../cardfolder/data";
+function Consultation({ info }) {
+  const [views] = useState(1);
 
-function Consultation() {
-  return <div>consultation</div>;
+  const data = a.slice(0, views);
+  console.log(`this is consultation:data ${data}`);
+  const drDetails = data.map((items) => {
+    const { id, name, speacilist } = items;
+    return (
+      <div key={id}>
+        <div className="consul-header">
+          <img
+            src={info}
+            alt="Dr.img"
+            width="70px"
+            height="70px"
+            className="image"
+          />
+
+          <div>
+            <b>{name}</b>
+            <p> {speacilist}</p>
+          </div>
+        </div>
+      </div>
+    );
+  });
+  return (
+    <div className="consul-detail">
+      <strong>consultation</strong>
+      <div>{drDetails}</div>
+    </div>
+  );
 }
 
 export default Consultation;
