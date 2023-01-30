@@ -1,8 +1,14 @@
 .consul-header {
-  border: 2px solid black;
-  padding: 5px;
+  border: none;
+  border-radius: 1rem;
+  background-color: #f5f5f7;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  margin-top: 5px;
+}
+.consul-detail {
+  margin-top: 5px;
 }

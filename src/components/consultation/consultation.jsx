@@ -14,8 +14,8 @@ function Consultation({ info }) {
           <img
             src={info}
             alt="Dr.img"
-            width="70px"
-            height="70px"
+            width="50px"
+            height="50px"
             className="image"
           />
 
@@ -29,7 +29,7 @@ function Consultation({ info }) {
   });
   return (
     <div className="consul-detail">
-      <strong>consultation</strong>
+      <strong>Consultation.</strong>
       <div>{drDetails}</div>
     </div>
   );
