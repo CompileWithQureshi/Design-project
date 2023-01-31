@@ -5,7 +5,7 @@ function Consultation({ info }) {
   const [views] = useState(1);
 
   const data = a.slice(0, views);
-  console.log(`this is consultation:data ${data}`);
+  // console.log(`this is consultation:data ${data}`);
   const drDetails = data.map((items) => {
     const { id, name, speacilist } = items;
     return (

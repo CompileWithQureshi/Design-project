@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import CardContainer from "./cardfolder/cardContainer";
 import Sidenavbar from "./Sidenavbar";
-// import Axios from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "./Product/Product";
 import Consultation from "./consultation/consultation";
@@ -15,16 +15,16 @@ const AdminPage = (props) => {
     const url = "https://randomuser.me/api/";
     const fectData = async () => {
       try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setInfo(json.results[0].picture.medium);
-        console.log(json.results[0].picture);
+        const getData = await axios.get(url);
+        // console.log(getData);
+        console.log(getData.data);
+        setInfo(getData.data.results[0].picture.large);
+        // console.log(getData.results[0].picture);
       } catch (error) {
         console.error(error);
       }
     };
     fectData();
-    console.log(fectData());
   }, []);
 
   return (

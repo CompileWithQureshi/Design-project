@@ -10,7 +10,7 @@ function CardContainer({ info }) {
   const [views, setViews] = useState(2);
 
   const data = a.slice(0, views);
-  console.log("card" + data);
+  // console.log("card" + data);
   const cardDetails = data.map((items) => {
     const { id, speacilist, name, rating } = items;
     return (
