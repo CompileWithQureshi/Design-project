@@ -18,7 +18,7 @@ const AdminPage = (props) => {
         const getData = await axios.get(url);
         // console.log(getData);
         console.log(getData.data);
-        setInfo(getData.data.results[0].picture.thumbnail);
+        setInfo(getData.data.results[0].picture.large);
         // console.log(getData.results[0].picture);
       } catch (error) {
         console.error(error);
