@@ -3,8 +3,6 @@ import "./consultation.css";
 import { a } from "../cardfolder/data";
 function Consultation({ info }) {
   const [views] = useState(1);
-  const [schedule, setSchedule] = useState({ date: "", time: "" });
-  console.log(schedule);
 
   const data = a.slice(0, views);
   // console.log(`this is consultation:data ${data}`);
@@ -30,28 +28,10 @@ function Consultation({ info }) {
     );
   });
 
-  const handleReschedule = () => {
-    // code to handle rescheduling logic
-    setSchedule({ date: "new date", time: "new time" });
-  };
-
-  const handleCancel = () => {
-    // code to handle cancellation logic
-    setSchedule({ date: "", time: "" });
-  };
-
   return (
     <div className="consul-detail">
       <strong>Consultation.</strong>
       <div>{drDetails}</div>
-      <div>
-        <div>
-          Date: {schedule.date}
-          Time: {schedule.time}
-        </div>
-        <button onClick={handleReschedule}>Reschedule</button>
-        <button onClick={handleCancel}>Cancel</button>
-      </div>
     </div>
   );
 }
