@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./consultation.css";
 import { a } from "../cardfolder/data";
+import Calendars from "./calender";
 function Consultation({ info }) {
   const [views] = useState(1);
 
@@ -10,7 +11,7 @@ function Consultation({ info }) {
     const { id, name, speacilist } = items;
     return (
       <div key={id}>
-        <div className="consul-header">
+        <div>
           <img
             src={info}
             alt="Dr.img"
@@ -23,6 +24,7 @@ function Consultation({ info }) {
             <b>{name}</b>
             <p> {speacilist}</p>
           </div>
+          <br />
         </div>
       </div>
     );
@@ -31,7 +33,11 @@ function Consultation({ info }) {
   return (
     <div className="consul-detail">
       <strong>Consultation</strong>
-      <div>{drDetails}</div>
+      <div className="consul-header">
+        {drDetails}
+        <br />
+        <Calendars />
+      </div>
     </div>
   );
 }
