@@ -30,7 +30,7 @@ function Consultation({ info }) {
 
   return (
     <div className="consul-detail">
-      <strong>Consultation.</strong>
+      <strong>Consultation</strong>
       <div>{drDetails}</div>
     </div>
   );
