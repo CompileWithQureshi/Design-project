@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./consultation.css";
 import { a } from "../cardfolder/data";
 // import Calendars from "./calender";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { WiTime4 } from "react-icons/wi";
 function Consultation({ info }) {
   const [views] = useState(1);
 
@@ -10,8 +12,8 @@ function Consultation({ info }) {
   const drDetails = data.map((items) => {
     const { id, name, speacilist, Date } = items;
     return (
-      <div key={id}>
-        <div>
+      <div key={id} className="consul-container">
+        <div className="consul-header">
           <img
             src={info}
             alt="Dr.img"
@@ -23,9 +25,18 @@ function Consultation({ info }) {
           <div>
             <b>{name}</b>
             <p> {speacilist}</p>
-            <h3>{Date}/2/23 Time:3pm to 7pm </h3>
           </div>
+
           <br />
+        </div>
+        <div className="date-time">
+          <big className="consul-date">
+            <AiOutlineCalendar /> {Date}/2/23
+          </big>
+          <big className="consul-time">
+            <WiTime4 />
+            3pm to 7pm
+          </big>
         </div>
       </div>
     );
@@ -34,7 +45,7 @@ function Consultation({ info }) {
   return (
     <div className="consul-detail">
       <strong>Consultation</strong>
-      <div className="consul-header">
+      <div>
         {drDetails}
         <br />
         {/* <Calendars /> */}
