@@ -6,6 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "./Product/Product";
 import Consultation from "./consultation/consultation";
+import Calendars from "./calender";
 
 const AdminPage = (props) => {
   const { usernames } = (props.location && props.location.datas) || {};
@@ -30,10 +31,13 @@ const AdminPage = (props) => {
   return (
     <div className="admin-container">
       <nav className="navbar">
-        <p className="nav-hdi">
-          Welcome <span className="username"> {usernames}</span>
-          <small>Cardiology</small>
-        </p>
+        <div className="nav-hdi">
+          Welcome
+          <div className="username-date">
+            <span className="username"> {usernames} </span>
+            <Calendars />
+          </div>
+        </div>
         <Sidenavbar />
       </nav>
       <main>
