@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./consultation.css";
 import { a } from "../cardfolder/data";
-import "react-slideshow-image/dist/styles.css";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { WiTime4 } from "react-icons/wi";
 function Consultation({ info }) {
