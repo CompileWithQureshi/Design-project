@@ -3,6 +3,7 @@ import "./consultation.css";
 import { a } from "../cardfolder/data";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { WiTime4 } from "react-icons/wi";
+
 function Consultation({ info }) {
   const [views] = useState(1);
 

@@ -11,7 +11,7 @@ const productData = [
     },
     {
         id: 2,
-        produ: 'LIFE BOY',
+        produ: 'Dove',
         price: 2,
         Avalable: false
 
@@ -19,21 +19,21 @@ const productData = [
     ,
     {
         id: 3,
-        produ: 'LIFE BOY',
+        produ: 'Sanitaizer',
         price: 1,
         Avalable: true
 
     },
     {
         id: 4,
-        produ: 'LIFE BOY',
+        produ: 'Head & Shoulder',
         price: 3,
         Avalable: false
 
     },
     {
         id: 5,
-        produ: 'LIFE BOY',
+        produ: 'Dolo-350',
         price: 4,
         Avalable: true
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./product.css";
 import productData from "./productdata";
 function Product() {
-  const [proDetails, setProDetails] = useState(1);
+  const [proDetails, setProDetails] = useState(3);
   const details = productData.slice(0, proDetails);
 
   const products = details.map((product) => {

@@ -10,10 +10,10 @@
 }
 .consul-container {
   padding: 15px;
-
   border: none;
   border-radius: 1rem;
   background-color: #f5f5f7;
+  overflow: hidden;
 }
 .date-time {
   border: 1px solid #adadf1;
