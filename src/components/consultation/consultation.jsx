@@ -3,10 +3,9 @@ import "./consultation.css";
 import { a } from "../cardfolder/data";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { WiTime4 } from "react-icons/wi";
-import Carousel from "react-bootstrap/Carousel";
 
 function Consultation({ info }) {
-  const [views] = useState(3);
+  const [views] = useState(1);
 
   const data = a.slice(0, views);
   // console.log(`this is consultation:data ${data}`);

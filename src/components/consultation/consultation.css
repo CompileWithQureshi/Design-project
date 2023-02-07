@@ -25,9 +25,12 @@
 }
 .consul-date {
   display: flex;
+  margin: 0 auto;
   align-items: center;
 }
 .consul-time {
   display: flex;
+  margin: 0 auto;
+
   align-items: center;
 }
