@@ -3,51 +3,59 @@ import "./consultation.css";
 import { a } from "../cardfolder/data";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { WiTime4 } from "react-icons/wi";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function Consultation({ info }) {
-  const [views] = useState(1);
-
-  const data = a.slice(0, views);
-  // console.log(`this is consultation:data ${data}`);
-  const drDetails = data.map((items) => {
-    const { id, name, speacilist, Date } = items;
-    return (
-      <div key={id} className="consul-container">
-        <div className="consul-header">
-          <img
-            src={info}
-            alt="Dr.img"
-            width="50px"
-            height="50px"
-            className="image"
-          />
-
-          <div>
-            <b>{name}</b>
-            <p> {speacilist}</p>
-          </div>
-
-          <br />
-        </div>
-        <div className="date-time">
-          <big className="consul-date">
-            <AiOutlineCalendar /> {Date}/2/23
-          </big>
-          <big className="consul-time">
-            <WiTime4 />
-            3pm to 7pm
-          </big>
-        </div>
-      </div>
-    );
-  });
-
   return (
     <div className="consul-detail">
       <strong>Consultation</strong>
       <div>
-        {drDetails}
-        <br />
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          // navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+          className="swiper-containers"
+        >
+          {a.map((items) => (
+            <SwiperSlide key={a.id}>
+              <div className="consul-header">
+                <img
+                  src={info}
+                  alt="Dr.img"
+                  width="50px"
+                  height="50px"
+                  className="image"
+                />
+
+                <div>
+                  <b>{items.name}</b>
+                  <p> {items.speacilist}</p>
+                </div>
+
+                <br />
+              </div>
+              <div className="date-time">
+                <big className="consul-date">
+                  <AiOutlineCalendar /> {items.Date}/2/23
+                </big>
+                <big className="consul-time">
+                  <WiTime4 />
+                  3pm to 7pm
+                </big>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
         {/* <Calendars /> */}
       </div>
     </div>
