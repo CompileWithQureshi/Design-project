@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./consultation.css";
 import { a } from "../cardfolder/data";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -13,20 +13,20 @@ function Consultation({ info }) {
   return (
     <div className="consul-detail">
       <strong>Consultation</strong>
-      <div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={1}
-          // navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          className="swiper-containers"
-        >
-          {a.map((items) => (
-            <SwiperSlide key={a.id}>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={60}
+        slidesPerView={1}
+        // navigation
+        scrollbar={{ dynamicBullets: true }}
+        pagination={{ clickable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        className="swiper-containers"
+      >
+        {a.map((items) => (
+          <SwiperSlide key={items.id}>
+            <div className="consul-container">
               <div className="consul-header">
                 <img
                   src={info}
@@ -52,12 +52,15 @@ function Consultation({ info }) {
                   3pm to 7pm
                 </big>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              <div>
+                <br />
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
 
         {/* <Calendars /> */}
-      </div>
+      </Swiper>
     </div>
   );
 }
