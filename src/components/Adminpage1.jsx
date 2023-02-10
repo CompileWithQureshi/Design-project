@@ -41,7 +41,7 @@ const AdminPage = (props) => {
         <Sidenavbar />
       </nav>
       <main>
-        <CardContainer info={info} />
+        <CardContainer info={info ? info : "Loading"} />
         <br />
         <div className="product-align">
           <Product />

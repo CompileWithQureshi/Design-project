@@ -8,6 +8,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Consultation({ info }) {
   return (
@@ -28,12 +30,13 @@ function Consultation({ info }) {
           <SwiperSlide key={items.id}>
             <div className="consul-container">
               <div className="consul-header">
-                <img
+                <LazyLoadImage
                   src={info}
                   alt="Dr.img"
                   width="50px"
                   height="50px"
                   className="image"
+                  effect="blur"
                 />
 
                 <div>

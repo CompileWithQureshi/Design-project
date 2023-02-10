@@ -3,6 +3,8 @@
 import "./Card.css";
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import { a } from "./data";
 
@@ -16,12 +18,13 @@ function CardContainer({ info }) {
     return (
       <div key={id} className="card-details">
         <div className="card-img">
-          <img
+          <LazyLoadImage
             src={info}
             alt="dr.img"
             width="100px"
             height="100px"
             className="image"
+            effect="blur"
           />
         </div>
         <div className="card-info">
