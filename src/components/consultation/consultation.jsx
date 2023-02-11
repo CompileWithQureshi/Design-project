@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { motion } from "framer-motion";
 
 function Consultation({ info }) {
   return (
@@ -30,14 +31,23 @@ function Consultation({ info }) {
           <SwiperSlide key={items.id}>
             <div className="consul-container">
               <div className="consul-header">
-                <LazyLoadImage
-                  src={info}
-                  alt="Dr.img"
-                  width="50px"
-                  height="50px"
-                  className="image"
-                  effect="blur"
-                />
+                <motion.div
+                  animate={{
+                    scale: [1, 1, 1, 1, 1],
+                    rotate: [0, 180, 180, 0],
+                    borderRadius: ["20%", "50%", "50%", "20%"],
+                  }}
+                  transition={{ type: "spring", duration: 3 }}
+                >
+                  <LazyLoadImage
+                    src={info}
+                    alt="Dr.img"
+                    width="50px"
+                    height="50px"
+                    className="image"
+                    effect="blur"
+                  />
+                </motion.div>
 
                 <div>
                   <b>{items.name}</b>
