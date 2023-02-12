@@ -33,6 +33,7 @@ function Consultation({ info }) {
               <div className="consul-header">
                 <motion.div
                   animate={{
+                    x: 0,
                     scale: [1, 1, 1, 1, 1],
                     rotate: [0, 180, 180, 0],
                     borderRadius: ["20%", "50%", "50%", "20%"],
