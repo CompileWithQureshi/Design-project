@@ -14,32 +14,31 @@ import { motion } from "framer-motion";
 
 function Consultation({ info }) {
   return (
-    <div className="consul-detail">
-      <strong>Consultation</strong>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={60}
-        slidesPerView={1}
-        // navigation
-        scrollbar={{ dynamicBullets: true }}
-        pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        className="swiper-containers"
-      >
-        {a.map((items) => (
-          <SwiperSlide key={items.id}>
-            <div className="consul-container">
-              <div className="consul-header">
-                <motion.div
-                  animate={{
-                    x: 0,
-                    scale: [1, 1, 1, 1, 1],
-                    rotate: [0, 180, 180, 0],
-                    borderRadius: ["20%", "50%", "50%", "20%"],
-                  }}
-                  transition={{ type: "spring", duration: 3 }}
-                >
+    <motion.div
+      animate={{
+        x: [0, 100, 0],
+        scale: [1, 1, 1, 1, 1],
+        borderRadius: ["20%", "50%", "50%", "20%"],
+      }}
+      transition={{ type: "spring", duration: 3 }}
+    >
+      <div className="consul-detail">
+        <strong>Consultation</strong>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={60}
+          slidesPerView={1}
+          // navigation
+          scrollbar={{ dynamicBullets: true }}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+          className="swiper-containers"
+        >
+          {a.map((items) => (
+            <SwiperSlide key={items.id}>
+              <div className="consul-container">
+                <div className="consul-header">
                   <LazyLoadImage
                     src={info}
                     alt="Dr.img"
@@ -48,34 +47,34 @@ function Consultation({ info }) {
                     className="image"
                     effect="blur"
                   />
-                </motion.div>
 
-                <div>
-                  <b>{items.name}</b>
-                  <p> {items.speacilist}</p>
+                  <div>
+                    <b>{items.name}</b>
+                    <p> {items.speacilist}</p>
+                  </div>
+
+                  <br />
                 </div>
+                <div className="date-time">
+                  <big className="consul-date">
+                    <AiOutlineCalendar /> {items.Date}/2/23
+                  </big>
+                  <big className="consul-time">
+                    <WiTime4 />
+                    3pm to 7pm
+                  </big>
+                </div>
+                <div>
+                  <br />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
 
-                <br />
-              </div>
-              <div className="date-time">
-                <big className="consul-date">
-                  <AiOutlineCalendar /> {items.Date}/2/23
-                </big>
-                <big className="consul-time">
-                  <WiTime4 />
-                  3pm to 7pm
-                </big>
-              </div>
-              <div>
-                <br />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-
-        {/* <Calendars /> */}
-      </Swiper>
-    </div>
+          {/* <Calendars /> */}
+        </Swiper>
+      </div>
+    </motion.div>
   );
 }
 

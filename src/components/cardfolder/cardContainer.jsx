@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { motion } from "framer-motion";
 
 import { a } from "./data";
 
@@ -46,20 +47,29 @@ function CardContainer({ info }) {
   });
   return (
     <section>
-      <div className="card-container">
-        <div className="card-hearder">
-          <h2>Top Doctors</h2>
-          <button
-            className="view-btn"
-            onClick={() => {
-              setViews(views + views);
-            }}
-          >
-            View All
-          </button>
+      <motion.div
+        animate={{
+          x: [0, 100, 0],
+          scale: [1, 1, 1, 1, 1],
+          borderRadius: ["20%", "50%", "50%", "20%"],
+        }}
+        transition={{ type: "spring", duration: 3 }}
+      >
+        <div className="card-container">
+          <div className="card-hearder">
+            <h2>Top Doctors</h2>
+            <button
+              className="view-btn"
+              onClick={() => {
+                setViews(views + views);
+              }}
+            >
+              View All
+            </button>
+          </div>
+          <div className="cards">{cardDetails}</div>
         </div>
-        <div className="cards">{cardDetails}</div>
-      </div>
+      </motion.div>
     </section>
   );
 }
