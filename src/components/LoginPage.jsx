@@ -1,6 +1,7 @@
 import Frame from "../Frame.png";
 import "../App.css";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 // import { Link } from "react-router-dom";
 const LoginPage = (props) => {
   const [datas, setDatas] = useState({
@@ -24,13 +25,21 @@ const LoginPage = (props) => {
 
   return (
     <div className="login-page">
-      <div className="Images">
+      <motion.div
+        className="Images"
+        animate={{
+          x: 0,
+          y: 0,
+          scale: [0.2, 1],
+          transition: { delay: 1, duration: 3 },
+        }}
+      >
         <h1 className="login-page-header">Welcome to my App</h1>
         <p className="login-para">
           Get ahead of the curve. Join the next generation of health heroes.
         </p>
         <img src={Frame} alt="side-imge" className="login-image" />
-      </div>
+      </motion.div>
       <div className="form">
         <h2 className="sign-in">Sign-in to your account</h2>
         <div className="form-container">
