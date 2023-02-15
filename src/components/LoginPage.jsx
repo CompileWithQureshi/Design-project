@@ -42,7 +42,7 @@ const LoginPage = (props) => {
         <img src={Frame} alt="side-imge" className="login-image" />
       </motion.div>
       <div className="form">
-        <Fade top>
+        <Fade left>
           <h2 className="sign-in">Sign-in to your account</h2>
         </Fade>
         <div className="form-container">
