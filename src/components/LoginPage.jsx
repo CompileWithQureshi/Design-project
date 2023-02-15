@@ -1,3 +1,4 @@
+import Fade from "react-reveal/Fade";
 import Frame from "../Frame.png";
 import "../App.css";
 import React, { useState } from "react";
@@ -41,7 +42,9 @@ const LoginPage = (props) => {
         <img src={Frame} alt="side-imge" className="login-image" />
       </motion.div>
       <div className="form">
-        <h2 className="sign-in">Sign-in to your account</h2>
+        <Fade top>
+          <h2 className="sign-in">Sign-in to your account</h2>
+        </Fade>
         <div className="form-container">
           <form onSubmit={(e) => handelSubmit(e)}>
             <input
