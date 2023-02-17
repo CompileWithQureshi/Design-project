@@ -1,10 +1,14 @@
 import Fade from "react-reveal/Fade";
 import Frame from "../Frame.png";
 import "../App.css";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 // import { Link } from "react-router-dom";
 const LoginPage = (props) => {
+  const inputElement = useRef();
+  useEffect(() => {
+    inputElement.current.focus();
+  }, []);
   const [datas, setDatas] = useState({
     usernames: "",
     passwords: "",
@@ -53,6 +57,7 @@ const LoginPage = (props) => {
               onChange={onChangeHandler}
               name="usernames"
               value={usernames}
+              ref={inputElement}
             />
             <br />
             <input
