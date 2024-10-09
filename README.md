@@ -59,3 +59,43 @@ src/
 │   └── App.js                # Main app file
 ├── App.css                   # Main styles for the app
 └── index.js                  # Entry point of the app
+
+
+```
+## Setup Instructions
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- **Node.js** (v12 or above)
+- **npm** or **yarn**
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/your-username/admin-dashboard-app.git
+Fork the repository.
+
+Create a new branch with your feature or bug fix:
+
+bash
+Copy code
+git checkout -b feature-branch
+Commit your changes:
+
+bash
+Copy code
+git commit -m 'Add some feature'
+Push to the branch:
+
+bash
+Copy code
+git push origin feature-branch
+Open a pull request.
+```
+
+This markdown is now correctly formatted with headings and code blocks for easier reading on GitHub or other markdown-supported platforms.
+
